@@ -1,0 +1,83 @@
+@font-face {
+	/* подключение локального шрифта для дисплея*/
+	font-family: LCD-font;
+	src: url(DOAcEk73.ttf);
+}
+
+body{
+	font-family: Helvetica;
+}
+div{
+	box-sizing: content-box;
+}
+.calc-wrapper{
+	/*Внешний контейнер калькулятора: задаются внешние отступы, тени, ширина*/
+	display: block;
+	margin: 50px auto;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	border-radius: 4px;
+	width: 400px;
+	position: relative;
+}
+.calc-inner{
+	/*Внутренний контейнер калькулятора: задаются внутренние отступы*/
+	padding: 20px;
+}
+.screen{
+	/*Дисплей*/
+	height: 70px;
+	color: #fff;
+	background-color: #222;
+	border-radius: 4px;
+	font-family: LCD-font;
+	font-size: 50px;
+	line-height: 70px;
+	text-align: right;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.btn-grid{
+	/*Слой с кнопками*/
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+}
+
+.btn{
+	/*Стили для любых кнокпок*/
+	display: block;
+	height: 70px;
+	width: 70px;
+	font-size: 50px;
+	line-height: 70px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 4px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	margin: 10px;
+	background-color: #f1f3c3;
+	-webkit-transition: all 0.1s cubic-bezier(0.39, 0.58, 0.57, 1);
+     -moz-transition: all 0.1s cubic-bezier(0.39, 0.58, 0.57, 1);
+     -o-transition: all 0.1s cubic-bezier(0.39, 0.58, 0.57, 1);
+     transition: all 0.1s cubic-bezier(0.39, 0.58, 0.57, 1);
+	/*CSS3 анимация*/
+}
+.btn:active{
+	/*Уменьшаем тень при нажатии*/
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.num-btn{
+	/*Стили для цифровых кнопок: другой цвет фона*/
+	background-color: #f1f1f1;
+}
+
+.res-btn{
+	/*Увеличенная в два раз по ширине кнопка "="*/
+	width: 160px;
+}
+
+.sign{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
