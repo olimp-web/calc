@@ -29,7 +29,7 @@ $(document).ready( function(){
   		operation = "";
       // сброс флагов и переменных в дефолтное состояние
   		$("#screen").text(tmp); // вывод результата на дисплей
-  		$(".op-btn").css("background-color", "#f1f3c3")+
+  		$(".op-btn").css("background-color", "#f1f3c3");
 
   	}
   };
